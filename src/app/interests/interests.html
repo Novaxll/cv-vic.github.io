@@ -1,0 +1,18 @@
+<section class="section-card">
+  <h2>Intereses</h2>
+  
+  <div *ngIf="!isEditing" style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <span *ngFor="let interest of interestsList" style="background-color: #e2e8f0; color: #4a5568; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">
+      {{ interest.name }}
+    </span>
+  </div>
+
+  <div *ngIf="isEditing">
+    <div *ngFor="let interest of interestsList" class="edit-card">
+      <input [(ngModel)]="interest.name" placeholder="Ej. Inteligencia Artificial">
+      <button class="btn-save" (click)="guardar(interest)">Guardar</button>
+      <button class="btn-delete" (click)="eliminar(interest.id)">Eliminar</button>
+    </div>
+    <button class="btn-add" (click)="agregar()">+ Añadir Interés</button>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="section-card">
+  <h2>Idiomas</h2>
+  
+  <ul *ngIf="!isEditing" style="list-style: none; padding: 0;">
+    <li *ngFor="let lang of languages" style="margin-bottom: 10px; display: flex; justify-content: space-between; border-bottom: 1px solid #edf2f7; padding-bottom: 5px;">
+      <strong>{{ lang.name }}</strong>
+      <span>{{ lang.level }} <em *ngIf="lang.certification" style="color: #a0aec0; font-size: 0.85rem;">({{ lang.certification }})</em></span>
+    </li>
+  </ul>
+
+  <div *ngIf="isEditing">
+    <div *ngFor="let lang of languages" class="edit-card">
+      <input [(ngModel)]="lang.name" placeholder="Idioma (Ej. Inglés)">
+      <input [(ngModel)]="lang.level" placeholder="Nivel (Ej. B2, Avanzado)">
+      <input [(ngModel)]="lang.certification" placeholder="Certificación">
+      <button class="btn-save" (click)="guardar(lang)">Guardar</button>
+      <button class="btn-delete" (click)="eliminar(lang.id)">Eliminar</button>
+    </div>
+    <button class="btn-add" (click)="agregar()">+ Añadir Idioma</button>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+.edit-mode-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+.edit-mode-toggle button {
+  background-color: #1e293b;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+}
+.edit-mode-toggle button:hover {
+  background-color: #0f172a;
+  transform: translateY(-2px);
+}

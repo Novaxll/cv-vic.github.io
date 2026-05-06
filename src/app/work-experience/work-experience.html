@@ -1,0 +1,28 @@
+<section class="section-card">
+  <h2>Experiencia Laboral</h2>
+  <div *ngFor="let work of workList" class="item-view">
+    
+    <ng-container *ngIf="!isEditing">
+      <h3>{{ work.position }}</h3>
+      <h4>{{ work.company }} | {{ work.location }} | {{ work.startDate }} - {{ work.endDate }}</h4>
+      <p>{{ work.accomplishments }}</p>
+    </ng-container>
+
+    <ng-container *ngIf="isEditing">
+      <div class="edit-card">
+        <input [(ngModel)]="work.position" placeholder="Puesto">
+        <input [(ngModel)]="work.company" placeholder="Empresa">
+        <input [(ngModel)]="work.location" placeholder="Ubicación">
+        <div style="display: flex; gap: 10px;">
+          <input [(ngModel)]="work.startDate" placeholder="Inicio">
+          <input [(ngModel)]="work.endDate" placeholder="Fin">
+        </div>
+        <textarea [(ngModel)]="work.accomplishments" placeholder="Logros y Tareas"></textarea>
+        <button class="btn-save" (click)="guardarCambios(work)">Guardar</button>
+        <button class="btn-delete" (click)="eliminar(work.id)">Eliminar</button>
+      </div>
+    </ng-container>
+
+  </div>
+  <button class="btn-add" *ngIf="isEditing" (click)="agregarNueva()">+ Añadir Experiencia</button>
+</section>

@@ -1,0 +1,24 @@
+<section class="section-card">
+  <h2>Certificados</h2>
+  <div *ngFor="let cert of certificates" class="item-view">
+    
+    <ng-container *ngIf="!isEditing">
+      <h3 style="display: flex; justify-content: space-between;">
+        {{ cert.title }} <span style="font-weight: 400; color: #718096; font-size: 0.9rem;">{{ cert.year }}</span>
+      </h3>
+      <p>{{ cert.description }}</p>
+    </ng-container>
+
+    <ng-container *ngIf="isEditing">
+      <div class="edit-card">
+        <input [(ngModel)]="cert.title" placeholder="Nombre del Certificado">
+        <input [(ngModel)]="cert.year" placeholder="Año">
+        <textarea [(ngModel)]="cert.description" placeholder="Institución o Detalles"></textarea>
+        <button class="btn-save" (click)="guardarCambios(cert)">Guardar</button>
+        <button class="btn-delete" (click)="eliminar(cert.id)">Eliminar</button>
+      </div>
+    </ng-container>
+
+  </div>
+  <button class="btn-add" *ngIf="isEditing" (click)="agregarNuevo()">+ Añadir Certificado</button>
+</section>

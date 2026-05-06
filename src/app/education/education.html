@@ -1,0 +1,26 @@
+<section class="section-card">
+  <h2>Educación</h2>
+  <div *ngFor="let edu of educationList" class="item-view">
+    
+    <ng-container *ngIf="!isEditing">
+      <h3>{{ edu.degree }}</h3>
+      <h4>{{ edu.university }}</h4>
+      <p style="color: #718096; font-size: 0.9rem;">{{ edu.startDate }} - {{ edu.endDate }}</p>
+    </ng-container>
+
+    <ng-container *ngIf="isEditing">
+      <div class="edit-card">
+        <input [(ngModel)]="edu.degree" placeholder="Grado o Título">
+        <input [(ngModel)]="edu.university" placeholder="Institución">
+        <div style="display: flex; gap: 10px;">
+          <input [(ngModel)]="edu.startDate" placeholder="Inicio">
+          <input [(ngModel)]="edu.endDate" placeholder="Fin">
+        </div>
+        <button class="btn-save" (click)="guardarCambios(edu)">Guardar</button>
+        <button class="btn-delete" (click)="eliminar(edu.id)">Eliminar</button>
+      </div>
+    </ng-container>
+
+  </div>
+  <button class="btn-add" *ngIf="isEditing" (click)="agregarNueva()">+ Añadir Educación</button>
+</section>

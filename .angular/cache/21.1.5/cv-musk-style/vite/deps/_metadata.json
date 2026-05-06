@@ -1,0 +1,76 @@
+{
+  "hash": "1b2c3804",
+  "configHash": "16ebaddb",
+  "lockfileHash": "b79baf43",
+  "browserHash": "877eaa0a",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "d9aaa77d",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "a206aed5",
+      "needsInterop": false
+    },
+    "@angular/fire/compat": {
+      "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-compat.mjs",
+      "file": "@angular_fire_compat.js",
+      "fileHash": "4ef89541",
+      "needsInterop": false
+    },
+    "@angular/fire/compat/firestore": {
+      "src": "../../../../../../node_modules/@angular/fire/fesm2022/angular-fire-compat-firestore.mjs",
+      "file": "@angular_fire_compat_firestore.js",
+      "fileHash": "f0de31ad",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "1ae1ff50",
+      "needsInterop": false
+    },
+    "rxjs/operators": {
+      "src": "../../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
+      "file": "rxjs_operators.js",
+      "fileHash": "02750056",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "d39e895c",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-DOEINWCZ": {
+      "file": "chunk-DOEINWCZ.js"
+    },
+    "chunk-Q3UUMOBA": {
+      "file": "chunk-Q3UUMOBA.js"
+    },
+    "chunk-F4EAOOWE": {
+      "file": "chunk-F4EAOOWE.js"
+    },
+    "chunk-YUKYNUMC": {
+      "file": "chunk-YUKYNUMC.js"
+    },
+    "index.esm-RSN2U2LS": {
+      "file": "index__esm-RSN2U2LS.js"
+    },
+    "chunk-FECECUVC": {
+      "file": "chunk-FECECUVC.js"
+    },
+    "chunk-7LJXV3FM": {
+      "file": "chunk-7LJXV3FM.js"
+    },
+    "chunk-VC3KBLVO": {
+      "file": "chunk-VC3KBLVO.js"
+    }
+  }
+}

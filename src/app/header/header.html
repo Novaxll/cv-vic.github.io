@@ -1,0 +1,30 @@
+<header class="section-card" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+  
+  <ng-container *ngIf="!isEditing">
+    <div style="flex: 2;">
+      <h1 style="margin: 0 0 5px 0; color: #111827; font-size: 2.5rem;">{{ header.name }}</h1>
+      <p style="font-size: 1.1rem; color: #3b82f6; font-weight: 500; margin: 0 0 15px 0;">{{ header.goalLife }}</p>
+    </div>
+    
+    <img [src]="header.photoUrl" alt="Perfil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    
+    <div style="flex: 1; text-align: right; min-width: 200px;">
+      <p style="margin: 5px 0;">📍 {{ header.location }}</p>
+      <p style="margin: 5px 0;">✉️ <a [href]="'mailto:' + header.email" style="color: #4a5568; text-decoration: none;">{{ header.email }}</a></p>
+      <p style="margin: 5px 0;">📱 {{ header.phoneNumber }}</p>
+      <p style="margin: 5px 0;">🔗 <a [href]="header.socialNetwork" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600;">Perfil Profesional</a></p>
+    </div>
+  </ng-container>
+
+  <div class="edit-card" *ngIf="isEditing" style="width: 100%;">
+    <h3 style="margin-top: 0;">Editar Encabezado</h3>
+    <input [(ngModel)]="header.name" placeholder="Nombre Completo">
+    <input [(ngModel)]="header.goalLife" placeholder="Título Profesional">
+    <input [(ngModel)]="header.photoUrl" placeholder="URL de la Foto">
+    <input [(ngModel)]="header.location" placeholder="Ubicación">
+    <input [(ngModel)]="header.email" placeholder="Correo">
+    <input [(ngModel)]="header.phoneNumber" placeholder="Teléfono">
+    <input [(ngModel)]="header.socialNetwork" placeholder="Enlace a Red Social">
+    <button class="btn-save" (click)="guardarCambios()">Guardar Encabezado</button>
+  </div>
+</header>
