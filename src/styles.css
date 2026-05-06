@@ -1,66 +1,23 @@
-/* src/styles.css */
 body { 
   background-color: #f3f4f6; 
   color: #333; 
   margin: 0; 
   font-family: 'Inter', sans-serif; 
 }
-.cv-container { 
-  max-width: 1100px; 
-  margin: 0 auto; 
-  padding: 20px; 
-}
-.cv-grid { 
-  display: grid; 
-  grid-template-columns: 2fr 1fr; 
-  gap: 30px; 
-  margin-top: 20px; 
-}
-@media (max-width: 768px) { 
-  .cv-grid { grid-template-columns: 1fr; } 
-}
+.cv-container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.cv-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 20px; }
+@media (max-width: 768px) { .cv-grid { grid-template-columns: 1fr; } }
 
-/* Tarjetas de Sección */
-.section-card { 
-  background: #ffffff; 
-  padding: 25px; 
-  border-radius: 12px; 
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
-  margin-bottom: 30px; 
-}
-h2 { 
-  border-bottom: 2px solid #e2e8f0; 
-  padding-bottom: 10px; 
-  margin-top: 0; 
-  color: #1a202c; 
-  font-size: 1.5rem;
-}
+.section-card { background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 30px; }
+h2 { border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 0; color: #1a202c; font-size: 1.5rem; }
 h3 { margin: 10px 0 5px; color: #2d3748; }
 h4 { margin: 0 0 10px 0; color: #4a5568; font-weight: 500; font-size: 0.95rem; }
 p, span, li { color: #4a5568; line-height: 1.6; margin-top: 0; }
 
-/* Formularios */
-input, textarea { 
-  width: 100%; 
-  padding: 10px; 
-  margin-bottom: 10px; 
-  border: 1px solid #cbd5e0; 
-  border-radius: 6px; 
-  box-sizing: border-box; 
-  font-family: inherit;
-  font-size: 0.95rem;
-}
+input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #cbd5e0; border-radius: 6px; box-sizing: border-box; font-family: inherit; font-size: 0.95rem; }
 textarea { resize: vertical; min-height: 80px; }
 
-/* Botones */
-button { 
-  cursor: pointer; 
-  border-radius: 6px; 
-  font-weight: 600; 
-  transition: all 0.2s; 
-  border: none; 
-  font-family: inherit;
-}
+button { cursor: pointer; border-radius: 6px; font-weight: 600; transition: all 0.2s; border: none; font-family: inherit; }
 .btn-save { background: #10b981; color: #fff; padding: 8px 16px; margin-right: 10px; }
 .btn-save:hover { background: #059669; }
 .btn-delete { background: #ef4444; color: #fff; padding: 8px 16px; }
@@ -68,13 +25,10 @@ button {
 .btn-add { background: #3b82f6; color: #fff; padding: 10px 20px; width: 100%; margin-top: 15px; }
 .btn-add:hover { background: #2563eb; }
 
-/* Tarjeta de Edición */
-.edit-card { 
-  background: #f8fafc; 
-  padding: 15px; 
-  border: 1px dashed #cbd5e0; 
-  border-radius: 8px; 
-  margin-bottom: 15px; 
-}
+.edit-card { background: #f8fafc; padding: 15px; border: 1px dashed #cbd5e0; border-radius: 8px; margin-bottom: 15px; }
 .item-view { margin-bottom: 25px; }
 .item-view:last-child { margin-bottom: 0; }
+
+/* Barra de progreso para Skills */
+.skill-item { margin-bottom: 15px; }
+.progress-bar { background-color: #edf2f7; border-radius: 12px; height: 10px; width: 100%; overflow: hidden; }

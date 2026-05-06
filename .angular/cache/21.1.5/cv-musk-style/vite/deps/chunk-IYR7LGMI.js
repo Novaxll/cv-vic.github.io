@@ -1,4 +1,9 @@
 import {
+  firebase,
+  getApps,
+  registerVersion
+} from "./chunk-7LJXV3FM.js";
+import {
   EnvironmentInjector,
   Inject,
   Injectable,
@@ -21,18 +26,13 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-F4EAOOWE.js";
+} from "./chunk-2PALSTFG.js";
 import {
   Observable,
   asyncScheduler,
   observeOn,
   subscribeOn
-} from "./chunk-YUKYNUMC.js";
-import {
-  firebase,
-  getApps,
-  registerVersion
-} from "./chunk-7LJXV3FM.js";
+} from "./chunk-KAN54ZUI.js";
 
 // node_modules/firebase/app/dist/esm/index.esm.js
 var name = "firebase";
@@ -428,4 +428,4 @@ export {
   AngularFireModule,
   ɵcacheInstance
 };
-//# sourceMappingURL=chunk-Q3UUMOBA.js.map
+//# sourceMappingURL=chunk-IYR7LGMI.js.map

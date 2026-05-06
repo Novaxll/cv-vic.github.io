@@ -11,6 +11,7 @@ import {
   createOperatorSubscriber,
   from,
   innerFrom,
+  isFunction,
   map,
   mapOneOrManyArgs,
   mergeAll,
@@ -18,7 +19,7 @@ import {
   popNumber,
   popResultSelector,
   popScheduler
-} from "./chunk-YUKYNUMC.js";
+} from "./chunk-KAN54ZUI.js";
 import {
   __extends,
   __read,
@@ -854,6 +855,18 @@ var VirtualAction = (function(_super) {
   };
   return VirtualAction2;
 })(AsyncAction);
+
+// node_modules/rxjs/dist/esm5/internal/util/isObservable.js
+function isObservable(obj) {
+  return !!obj && (obj instanceof Observable || isFunction(obj.lift) && isFunction(obj.subscribe));
+}
+
+// node_modules/rxjs/dist/esm5/internal/observable/defer.js
+function defer(observableFactory) {
+  return new Observable(function(subscriber) {
+    innerFrom(observableFactory()).subscribe(subscriber);
+  });
+}
 
 // node_modules/rxjs/dist/esm5/internal/observable/forkJoin.js
 function forkJoin() {
@@ -26541,6 +26554,8 @@ var REQUEST_CONTEXT = new InjectionToken(typeof ngDevMode === "undefined" || ngD
 export {
   SIGNAL,
   queueScheduler,
+  isObservable,
+  defer,
   forkJoin,
   merge,
   setCurrentInjector,
@@ -27045,4 +27060,4 @@ export {
   RESPONSE_INIT,
   REQUEST_CONTEXT
 };
-//# sourceMappingURL=chunk-F4EAOOWE.js.map
+//# sourceMappingURL=chunk-2PALSTFG.js.map

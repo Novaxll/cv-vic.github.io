@@ -1,13 +1,13 @@
 <section class="section-card">
   <h2>Habilidades</h2>
-  <div *ngFor="let skill of skillsList" class="item-view" style="margin-bottom: 15px;">
+  <div *ngFor="let skill of skillsList" class="item-view skill-item">
     
     <ng-container *ngIf="!isEditing">
       <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
         <strong>{{ skill.name }}</strong>
         <span style="color: #718096; font-size: 0.9rem;">{{ skill.percentaje }}%</span>
       </div>
-      <div style="background-color: #edf2f7; border-radius: 10px; height: 10px; overflow: hidden;">
+      <div class="progress-bar">
         <div [style.width]="skill.percentaje + '%'" style="background-color: #3b82f6; height: 100%; border-radius: 10px;"></div>
       </div>
     </ng-container>

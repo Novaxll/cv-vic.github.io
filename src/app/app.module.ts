@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // <-- NECESARIO PARA EDITAR
+import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 
 import { App } from './app';
+import { AppRoutingModule } from './app-routing-module';
+import { CvViewComponent } from './cv-view.component';
+import { CvEditComponent } from './cv-edit.component';
+
 import { Header } from './header/header';
 import { Skills } from './skills/skills';
 import { WorkExperience } from './work-experience/work-experience';
@@ -16,18 +20,12 @@ import { Interests } from './interests/interests';
 
 @NgModule({
   declarations: [
-    App,
-    Header,
-    Skills,
-    WorkExperience,
-    Certificates,
-    Education,
-    Languages,
-    Interests
+    App, CvViewComponent, CvEditComponent, Header, Skills, WorkExperience, Certificates, Education, Languages, Interests
   ],
   imports: [
     BrowserModule,
-    FormsModule, // <-- AGREGADO AQUÍ
+    AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],

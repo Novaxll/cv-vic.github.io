@@ -1,6 +1,4 @@
-import {
-  isPlatformServer
-} from "./chunk-DOEINWCZ.js";
+import "./chunk-FECECUVC.js";
 import {
   FIREBASE_APP_NAME,
   FIREBASE_OPTIONS,
@@ -14,48 +12,7 @@ import {
   ɵgetDefaultInstanceOf,
   ɵlazySDKProxy,
   ɵzoneWrap
-} from "./chunk-Q3UUMOBA.js";
-import {
-  EnvironmentInjector,
-  Inject,
-  Injectable,
-  InjectionToken,
-  NgModule,
-  NgZone,
-  Optional,
-  PLATFORM_ID,
-  VERSION,
-  inject,
-  merge,
-  setClassMetadata,
-  ɵɵdefineInjectable,
-  ɵɵdefineInjector,
-  ɵɵdefineNgModule,
-  ɵɵinject
-} from "./chunk-F4EAOOWE.js";
-import {
-  Observable,
-  Subject,
-  asyncScheduler,
-  concatMap,
-  distinct,
-  distinctUntilChanged,
-  filter,
-  first,
-  from,
-  map,
-  observeOn,
-  of,
-  pairwise,
-  scan,
-  shareReplay,
-  startWith,
-  subscribeOn,
-  switchMap,
-  switchMapTo,
-  timer
-} from "./chunk-YUKYNUMC.js";
-import "./chunk-FECECUVC.js";
+} from "./chunk-IYR7LGMI.js";
 import {
   Component,
   Deferred,
@@ -89,6 +46,49 @@ import {
   setLogLevel,
   updateEmulatorBanner
 } from "./chunk-7LJXV3FM.js";
+import {
+  isPlatformServer
+} from "./chunk-FQCEZIUT.js";
+import {
+  EnvironmentInjector,
+  Inject,
+  Injectable,
+  InjectionToken,
+  NgModule,
+  NgZone,
+  Optional,
+  PLATFORM_ID,
+  VERSION,
+  inject,
+  merge,
+  setClassMetadata,
+  ɵɵdefineInjectable,
+  ɵɵdefineInjector,
+  ɵɵdefineNgModule,
+  ɵɵinject
+} from "./chunk-2PALSTFG.js";
+import {
+  Observable,
+  Subject,
+  asyncScheduler,
+  concatMap,
+  distinct,
+  distinctUntilChanged,
+  filter,
+  first,
+  from,
+  map,
+  observeOn,
+  of,
+  pairwise,
+  scan,
+  shareReplay,
+  startWith,
+  subscribeOn,
+  switchMap,
+  switchMapTo,
+  timer
+} from "./chunk-KAN54ZUI.js";
 import {
   __spreadValues
 } from "./chunk-VC3KBLVO.js";

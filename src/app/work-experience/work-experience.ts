@@ -2,11 +2,7 @@ import { Component, OnInit, ChangeDetectorRef, Input } from '@angular/core';
 import { WorkExperienceService } from '../services/work-experience-service/work-experience';
 import { map } from 'rxjs/operators';
 
-@Component({
-  selector: 'app-work-experience',
-  standalone: false,
-  templateUrl: './work-experience.html'
-})
+@Component({ selector: 'app-work-experience', standalone: false, templateUrl: './work-experience.html' })
 export class WorkExperience implements OnInit {
   @Input() isEditing: boolean = false;
   workList: any[] = [];
@@ -15,18 +11,13 @@ export class WorkExperience implements OnInit {
 
   ngOnInit(): void {
     this.workService.getWorkExperience().snapshotChanges().pipe(
-      map((changes: any) =>
-        changes.map((c: any) => ({ id: c.payload.doc.id, ...c.payload.doc.data() }))
-      )
-    ).subscribe((data: any[]) => {
-      this.workList = data;
-      this.cdr.detectChanges();
-    });
+      map(changes => changes.map(c => ({ id: c.payload.doc.id, ...c.payload.doc.data() })))
+    ).subscribe(data => { this.workList = data; this.cdr.detectChanges(); });
   }
 
   agregarNueva() {
     const nueva = { company: 'Nueva Empresa', position: 'Nuevo Puesto', location: '', startDate: '', endDate: '', accomplishments: '' };
-    this.workService.create(nueva as any);
+    this.workService.create(nueva);
   }
 
   guardarCambios(work: any) {
@@ -35,8 +26,6 @@ export class WorkExperience implements OnInit {
   }
 
   eliminar(id: string) {
-    if(confirm('¿Eliminar experiencia?')) {
-      this.workService.delete(id);
-    }
+    if(confirm('¿Eliminar experiencia?')) this.workService.delete(id);
   }
 }

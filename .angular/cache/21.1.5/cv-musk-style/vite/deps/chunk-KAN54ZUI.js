@@ -4314,8 +4314,10 @@ function zipWith() {
 }
 
 export {
+  isFunction,
   Subscription,
   noop,
+  pipe,
   Observable,
   createOperatorSubscriber,
   refCount,
@@ -4333,14 +4335,18 @@ export {
   subscribeOn,
   from,
   of,
+  throwError,
+  EmptyError,
   timeout,
   map,
   mapOneOrManyArgs,
   argsArgArrayOrObject,
   createObject,
+  combineLatest,
   mergeMap,
   mergeAll,
   concatAll,
+  concat2 as concat,
   timer,
   filter,
   audit,
@@ -4355,11 +4361,11 @@ export {
   toArray,
   combineLatestAll,
   combineAll,
-  combineLatest2 as combineLatest,
+  combineLatest2,
   combineLatestWith,
   concatMap,
   concatMapTo,
-  concat,
+  concat as concat2,
   concatWith,
   connect,
   count,
@@ -4448,4 +4454,4 @@ export {
   partition,
   race
 };
-//# sourceMappingURL=chunk-YUKYNUMC.js.map
+//# sourceMappingURL=chunk-KAN54ZUI.js.map
